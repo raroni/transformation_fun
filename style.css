@@ -1,0 +1,9 @@
+body {
+  background: #ccc;
+}
+
+body > canvas {
+  background: #fff;
+  margin: 0 auto;
+  display: block;
+}
