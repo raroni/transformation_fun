@@ -3,9 +3,9 @@ Transformation fun
 
 I wrote this Javascript application to improve my understanding of matrix transformations of vertices. To keep things simple I chose to do it in 2D.
 
-This turned out to be a very educational exercise for me. I think others who want to be better at joggling with transformation can benefit from reading the code. Or better yet, recreate it own their own :-)
+This turned out to be a very educational exercise for me. I think others who want to be better at joggling transformations can benefit from reading the code. Or better yet, re-writing it own their own :-)
 
-The meat of the application is in `MyGraph`'s constructor (see `my_graph.js`). When everyhing is implemented properly matrix transformations are a thing of beauty:
+The meat of the application is in `MyGraph`'s constructor (see `my_graph.js`). When everything is set up properly matrix transformations are a thing of beauty:
 
     var rotatedHouse = originalHouse.getCopy();
     transformation = Matrix3.translation(5, 3);
