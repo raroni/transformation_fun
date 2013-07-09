@@ -8,9 +8,9 @@ This turned out to be a very educational exercise for me. I think others who wan
 The meat of the application is in `MyGraph`'s constructor (see `my_graph.js`). When everything is set up properly matrix transformations are a thing of beauty:
 
     var rotatedHouse = originalHouse.getCopy();
-    transformation = Matrix3.translation(5, 3); // move to origin
-    transformation = transformation.multiply(Matrix3.rotation(Math.PI/4)); // rotate around origin
-    transformation = transformation.multiply(Matrix3.translation(-5, -3)); // move back
+    transformation = Matrix3.translation(5, 3);
+    transformation = transformation.multiply(Matrix3.rotation(Math.PI/4));
+    transformation = transformation.multiply(Matrix3.translation(-5, -3));
     rotatedHouse.transform(transformation);
 
 ![Screenshot of transformation fun](http://rasmusrn.github.io/transformation_fun/ss.jpg)
