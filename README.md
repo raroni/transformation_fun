@@ -13,7 +13,7 @@ The meat of the application is in `MyGraph`'s constructor (see `my_graph.js`). W
     transformation = transformation.multiply(Matrix3.translation(-5, -3));
     rotatedHouse.transform(transformation);
 
-![Screenshot of transformation fun](rasmusrn.github.io/transformation_fun/ss.jpg)
+![Screenshot of transformation fun](http://rasmusrn.github.io/transformation_fun/ss.jpg)
 
 How to run
 ----------
