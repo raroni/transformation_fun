@@ -13,13 +13,11 @@ function MyGraph(canvas) {
 
   var rotatedHouse = originalHouse.getCopy();
   rotatedHouse.color = 'blue';
-  // In order to rotate the house around its own axis we need to first move it to the origin.
-  // Then rotate it - and then move it back.
   // Notice that the matrices are multiplied in reverse order.
   // This is just how transformation multiplication works.
-  transformation = Matrix3.translation(5, 3);
-  transformation = transformation.multiply(Matrix3.rotation(Math.PI/4))
-  transformation = transformation.multiply(Matrix3.translation(-5, -3));
+  transformation = Matrix3.translation(5, 3); // move back start position
+  transformation = transformation.multiply(Matrix3.rotation(Math.PI/4)); // rotate
+  transformation = transformation.multiply(Matrix3.translation(-5, -3)); // move to origin
   rotatedHouse.transform(transformation);
 
   this.backend.meshes.push(originalHouse);
