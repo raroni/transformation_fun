@@ -13,11 +13,16 @@ function MyGraph(canvas) {
 
   var rotatedHouse = originalHouse.getCopy();
   rotatedHouse.color = 'blue';
-  // Notice that the matrices are multiplied in reverse order.
-  // This is just how transformation multiplication works.
-  transformation = Matrix3.translation(5, 3); // move back start position
-  transformation = transformation.multiply(Matrix3.rotation(Math.PI/4)); // rotate
-  transformation = transformation.multiply(Matrix3.translation(-5, -3)); // move to origin
+
+  var translation1 = Matrix3.translation(-5, -3); // moving to origin
+  var rotation = Matrix3.rotation(Math.PI/4); // rotating
+  var translation2 = Matrix3.translation(5, 3); // moving back to original coordinate
+
+  // Because I'm using column vectors and post-multiplication, matrix transformations should
+  // be concatenated backwards.
+  transformation = (translation2.multiply(rotation)).multiply(translation1);
+
+
   rotatedHouse.transform(transformation);
 
   this.backend.meshes.push(originalHouse);
